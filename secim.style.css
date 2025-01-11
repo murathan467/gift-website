@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  
+  
+  /* 1. div: transparan olacak */
+  .ana {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ortalamak için */
+    pointer-events: auto; /* Etkileşime girmesini sağlamak için */
+    z-index: 2; /* 1. div'in üstte olmasını sağla */
+  }
+  
+  /* 2. div: normal opak olacak */
+  .container{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+   z-index: 1; /* 2. div'i alt kısıma yerleştiriyoruz */
+    transform: translate(-50%, -50%); /* Ortalamak için */
+    pointer-events: none; /* 2. div üzerinde tıklamayı engeller */
+  }
+  
+
+  
+  .ana{
+    width: 490px;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid gray;
+    backdrop-filter: blur(7px);
+
+  }
+   form{
+    display: flex;
+    flex-direction: column;
+   }
+  
+  h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  
+  
+  
+
+  
+  
+  
+  button{
+    background: white;
+    color: black;
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+  }
+  
+  .foto{
+    margin: 30px;
+  }
+
+  
+  
+  body {
+      background: #131b21;
+      
+    }
+    
+    .container {
+      width: 50%;
+      margin: 0 auto;
+    }
+    
+    svg#flower-frame {
+      height: 65vh;
+      width: 100%;
+    }
+    
+    
+    
+    #Footer_group_1_,
+    [id^=PinkFlowerGroup],
+    [id^=BaseGroup] path,
+    [id^=LeafGroup] path,
+    path[id^=Stroke],
+    g[id^=BudGroup] g[id^=BudGroup] g[id^=Bud],
+    #Bud8_1_,
+    #Bud10_1_,
+    #Bud23_1_,
+    #Bud26_1_,
+    [id^=Dots],
+    [id^=Flourish] {
+      visibility: hidden;
+    }

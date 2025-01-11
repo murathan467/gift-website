@@ -1,0 +1,154 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.birlesme {
+  position: relative;
+  width: 300px;  /* Konteynerin genişliği */
+  height: 300px; /* Konteynerin yüksekliği */
+  margin: 0 auto; /* Ortalamak için */
+}
+
+/* 1. div: transparan olacak */
+.ana {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Ortalamak için */
+  pointer-events: auto; /* Etkileşime girmesini sağlamak için */
+  z-index: 2; /* 1. div'in üstte olmasını sağla */
+}
+
+/* 2. div: normal opak olacak */
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+ z-index: 1; /* 2. div'i alt kısıma yerleştiriyoruz */
+  transform: translate(-50%, -50%); /* Ortalamak için */
+  pointer-events: none; /* 2. div üzerinde tıklamayı engeller */
+}
+
+.giris{
+   width: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 10px;
+    color: white;
+}
+
+.ana{
+  width: 490px;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid gray;
+  backdrop-filter: blur(8px);
+}
+ form{
+  display: flex;
+  flex-direction: column;
+ }
+
+h2{
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.giris-alanı {
+  position: relative;
+  border-bottom: 2px solid gray;
+  margin: 15px 0;
+  text-align: left;
+}
+
+
+
+.giris-alanı label{
+  position:absolute;
+  color: white;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+}
+
+.giris-alanı input{
+  width: 100px;
+  height: 40px;
+  color: white;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.giris-alanı input:focus~label,
+.giris-alanı input:valid~label{
+  font-size: 0.8rem;
+  top: 10px;
+  transform: translateY(-120%);
+}
+
+button{
+  background: white;
+  color: black;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.varsa{
+  text-align: center;
+  margin-top: 30px;
+  color: white;
+}
+
+
+
+body {
+    background: #131b21;
+    
+  }
+  
+  .container {
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  svg#flower-frame {
+    height: 85vh;
+    width: 100%;
+  }
+  
+  
+  
+  #Footer_group_1_,
+  [id^=PinkFlowerGroup],
+  [id^=BaseGroup] path,
+  [id^=LeafGroup] path,
+  path[id^=Stroke],
+  g[id^=BudGroup] g[id^=BudGroup] g[id^=Bud],
+  #Bud8_1_,
+  #Bud10_1_,
+  #Bud23_1_,
+  #Bud26_1_,
+  [id^=Dots],
+  [id^=Flourish] {
+    visibility: hidden;
+  }
